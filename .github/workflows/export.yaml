@@ -33,6 +33,7 @@ jobs:
         run: |
           mkdir -v -p ~/.local/share/godot/templates
           cp -r /root/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/templates/${GODOT_VERSION}.stable
+          ls -al ~/.local/share/godot/templates/${GODOT_VERSION}.stable
       - name: Windows Build
         run: |
           mkdir -v -p build/windows
