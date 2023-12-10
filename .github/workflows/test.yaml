@@ -29,4 +29,6 @@ jobs:
         with:
           lfs: true
       - name: Unit Test
-        run: godot -d -s --headless --path $PWD addons/gut/gut_cmdln.gd -gexit
+        run: |
+          godot --headless --export-debug "Linux/X11"
+          godot -s --headless res://addons/gut/gut_cmdln.gd -gexit
