@@ -28,9 +28,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           lfs: true
+      # Ensure Godot can import GUT
+      - name: Bootstrap
+        run: godot --headless --export-debug "Linux/X11"
       - name: Unit Test
-        run: |
-          echo "::group::Prepare Godot Project"
-          godot --headless --export-debug "Linux/X11"
-          echo "::endgroup::"
-          godot -s --headless res://addons/gut/gut_cmdln.gd -gexit
+        run: godot -s --headless res://addons/gut/gut_cmdln.gd -gexit
