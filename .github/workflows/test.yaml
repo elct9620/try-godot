@@ -30,5 +30,7 @@ jobs:
           lfs: true
       - name: Unit Test
         run: |
+          echo "::group::Prepare Godot Project"
           godot --headless --export-debug "Linux/X11"
+          echo "::endgroup::"
           godot -s --headless res://addons/gut/gut_cmdln.gd -gexit
