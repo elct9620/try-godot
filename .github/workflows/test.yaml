@@ -1,0 +1,32 @@
+name: "Godot Unit Test"
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  GODOT_VERSION: 4.2
+
+jobs:
+  godot-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "::debug::Godot Version ${GODOT_VERSION}"
+    outputs:
+      version: ${{ env.GODOT_VERSION }}
+
+  test:
+    name: Test Game
+    needs:
+      - godot-ci
+    runs-on: ubuntu-20.04
+    container:
+      image: barichello/godot-ci:${{ needs.godot-ci.outputs.version }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+      - name: Unit Test
+        run: godot -s res://addons/gut/gut_cmdln.gd -d --headless

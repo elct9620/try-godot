@@ -1,13 +1,10 @@
 name: "Godot Export"
 
 on:
-  push:
-    branches:
-      - main
+  - workflow_dispatch
 
 env:
   GODOT_VERSION: 4.2
-  EXPORT_NAME: TryGodot
 
 jobs:
   godot-ci:
