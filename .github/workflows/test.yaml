@@ -29,4 +29,4 @@ jobs:
         with:
           lfs: true
       - name: Unit Test
-        run: godot -s res://addons/gut/gut_cmdln.gd --headless
+        run: godot -d -s --headless --path $PWD addons/gut/gut_cmdln.gd -gexit
