@@ -28,6 +28,18 @@ jobs:
             preset: Windows Desktop
             path: build/windows
             executable: TryGodot.exe
+          - name: macOS
+            preset: macOS
+            path: build/macos
+            executable: TryGodot.zip
+          - name: Linux
+            preset: Linux/X11
+            path: build/linux
+            executable: TryGodot.x86_64
+          - name: Web
+            preset: Web
+            path: build/web
+            executable: TryGodot.zip
     runs-on: ubuntu-20.04
     container:
       image: barichello/godot-ci:${{ needs.godot-ci.outputs.version }}
