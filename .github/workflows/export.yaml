@@ -12,7 +12,8 @@ env:
 jobs:
   godot-ci:
     runs-on: ubuntu-latest
-    steps: []
+    steps:
+      - run: echo "::debug::Godot Version ${GODOT_VERSION}"
     outputs:
       version: ${{ env.GODOT_VERSION }}
 
