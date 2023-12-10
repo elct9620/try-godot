@@ -24,16 +24,20 @@ jobs:
     strategy:
       matrix:
         platform:
-          - preset: Windows Desktop
+          - name: Windows
+            preset: Windows Desktop
             path: build/windows
             executable: TryGodot.exe
-          - preset: macOS
+          - name: macOS
+            preset: macOS
             path: build/macos
             executable: TryGodot.zip
-          - preset: Linux/X11
+          - name: Linux
+            preset: Linux/X11
             path: build/linux
             executable: TryGodot.x86_64
-          - preset: Web
+          - name: Web
+            preset: Web
             path: build/web
             executable: TryGodot.zip
     runs-on: ubuntu-20.04
@@ -48,12 +52,12 @@ jobs:
         run: |
           mkdir -v -p ~/.local/share/godot/export_templates
           cp -r /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
-      - name: ${{ matrix.platform.preset }} Build
+      - name: ${{ matrix.platform.name }} Build
         run: |
           mkdir -v -p ${{ matrix.platform.path }}
           godot -v --headless --export-release "${{ matrix.platform.preset }}" ./${{ matrix.platform.path }}/${{ matrix.platform.executable }}
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ matrix.platform.preset }}
+          name: ${{ matrix.platform.name }}
           path: ${{ matrix.platform.path }}
