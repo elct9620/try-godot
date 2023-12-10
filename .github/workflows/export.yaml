@@ -18,7 +18,7 @@ jobs:
       version: ${{ env.GODOT_VERSION }}
 
   exports:
-    name: Windows Export
+    name: Export Game
     needs:
       - godot-ci
     strategy:
