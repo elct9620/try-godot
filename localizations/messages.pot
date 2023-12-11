@@ -1,0 +1,16 @@
+# LANGUAGE translation for Try Godot for the following files:
+# res://scenes/entrance.tscn
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Try Godot\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: scenes/entrance.tscn
+msgid "Start Game"
+msgstr ""
