@@ -36,7 +36,7 @@ jobs:
           - name: Web
             preset: Web
             path: build/web
-            executable: TryGodot.zip
+            executable: index.html
     runs-on: ubuntu-20.04
     container:
       image: barichello/godot-ci:${{ needs.godot-ci.outputs.version }}
