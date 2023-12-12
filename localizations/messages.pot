@@ -1,6 +1,7 @@
 # LANGUAGE translation for Try Godot for the following files:
 # res://scenes/entrance.tscn
 # res://scenes/player_room.tscn
+# res://ui/hud.tscn
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -16,6 +17,10 @@ msgstr ""
 msgid "Start Game"
 msgstr ""
 
-#: scenes/player_room.tscn
-msgid "Are you ready?\n"
+#: ui/hud.tscn
+msgid "Start Mission"
+msgstr ""
+
+#: ui/hud.tscn
+msgid "Exit"
 msgstr ""

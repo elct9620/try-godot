@@ -17,6 +17,13 @@ msgstr ""
 msgid "Start Game"
 msgstr "開始遊戲"
 
-#: scenes/player_room.tscn
-msgid "Are you ready?\n"
-msgstr "你準備好了嗎？\n"
+#: ui/hud.tscn
+msgid "Start Mission"
+msgstr "開始任務"
+
+#: ui/hud.tscn
+msgid "Exit"
+msgstr "離開"
+
+#~ msgid "Are you ready?\n"
+#~ msgstr "你準備好了嗎？\n"
